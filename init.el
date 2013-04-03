@@ -128,12 +128,13 @@
 ;; Mozc用設定
 (setq mozc-candidate-style 'overlay)
 
+;; title bar
+(setq frame-title-format (format "%%f - Emacs@%s" (system-name)))
+
 ;; key-binds
 (global-set-key (kbd "C-x C-b") 'helm-mini)
 
 ;; mode-line
-(set-default 'mode-line-buffer-identification
-             '(buffer-file-name ("%f") ("%b")))
 
 ;; タブ 全角スペース CR+LF を色つけする
 (setq whitespace-style
@@ -151,9 +152,10 @@
 
 ;; 画面サイズ指定
 (setq initial-frame-alist
-  (append '((top . 0)
-            (left . 0)
+  (append '((top . 30)
+            (left . 30)
             (width . 200)
             (height . 45)
   ) initial-frame-alist))
+
 
